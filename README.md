@@ -84,4 +84,7 @@ adam|0.9893|0.9794
 - layer5: (full connection,nodes:100,active function:relu)
 - layer6: (full connection,nodes:10,active function:softmax)
 
+$\sqrt{x^{2}}$ 
+5$\times$5$
+
 
