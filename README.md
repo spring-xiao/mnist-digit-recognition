@@ -26,7 +26,7 @@ adam|0.9893|0.9794
 - layer2: 50 nodes 
 - layer3: 10 nodes
 - active function: Relu,Relu,softmax
-- learning rate: 0.0001,
+- learning rate: 0.0001
 - decay_rate: 0.9
 - optimizer: adam
 - regularization:L2
