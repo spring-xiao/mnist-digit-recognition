@@ -7,6 +7,7 @@
 - active function:Relu,Relu,softmax
 - learning rate:0.0001
 - iters:1000
+
 三种优化算法的模型效果：
 optimizer|train_acc|test_acc
 :-|-:|-:
