@@ -17,7 +17,9 @@ gd|0.9263|0.9293
 momentum|0.9798|0.9745
 adam|0.9893|0.9794
 
-采用学习率阶梯指数递减，adam优化算法，迭代1000次,模型效果 train_acc:0.98945,test_acc:0.9794,模型效果并未提升。
+采用学习率阶梯指数递减，adam优化算法，迭代1000次,模型效果并未提升，模型效果：
+- train_acc:0.98945
+- test_acc:0.9794
 
 (2) 网络结构和基本超参数配置
 - layer1: 100 nodes  
@@ -32,6 +34,6 @@ adam|0.9893|0.9794
 
 学习率阶梯指数递减，以50次为一阶梯，记录每次训练的模型效果，训练集和测试集的效果图：
 
-![markdown](https://github.com/spring-xiao/mnist-digit-recognition/tree/master/result/acc-model-dnn-img.jpg)
+![markdown](https://github.com/spring-xiao/mnist-digit-recognition/blob/master/result/acc-model-cnn-img.jpg)
 
 ## 2.CNN网络建模
