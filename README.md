@@ -10,6 +10,7 @@
 - iters:1000
 
 三种优化算法的模型效果：
+
 optimizer|train_acc|test_acc
 ----|----|-----
 gd|0.9263|0.9293
