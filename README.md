@@ -77,14 +77,56 @@ adam|0.9893|0.9794
 ## 2.CNN网络建模
 
 网络结构
-- layer1: (conv,filter:5$\times$5$\times$32,stride:1,padding:same,active funtion:Relu)
-- layer2: (pool,filter:3$\times\$3,stride:1,padding:valid,pool type:max)
-- layer3: (conv,filter:5$\times$5$\times$64,stride:1,padding:same,active function:Relu)
-- layer4: (pool,filter:5$\times\$5,stride:1,padding:valid,pool type:max)
+- layer1: (conv,filter:5*5*32,stride:1,padding:same,active funtion:Relu)
+- layer2: (pool,filter:3*3,stride:1,padding:valid,pool type:max)
+- layer3: (conv,filter:5*5*64,stride:1,padding:same,active function:Relu)
+- layer4: (pool,filter:5*5,stride:1,padding:valid,pool type:max)
 - layer5: (full connection,nodes:100,active function:relu)
 - layer6: (full connection,nodes:10,active function:softmax)
+- learning rate: 0.001,
+- decay_rate: 0.8
+- optimizer: adam
+- regularization:L2
+- iters:100
 
-$\sqrt{x^{2}}$ 
-5$\times$5$
+学习率阶梯指数递减，以2次为一阶梯（cnn网络结构，采用学习率衰减，模型效果有明显的提升），记录每次训练的模型效果，训练集和测试集的效果图：
+![markdown](https://github.com/spring-xiao/mnist-digit-recognition/blob/master/result/acc-model-cnn-img.jpg)
+
+以测试集的accuracy为评价指标，选出的最优模型效果如下，模型文件保存为model/mnist-model-cnn.pkl
+- train_acc: 0.9973
+- test_acc: 0.9947
+
+最优模型的混淆矩阵
+
+训练集混淆矩阵
+
+|   |0|1|2|3|4|5|6|7|8|9|acc_rate
+----|----|----|----|----|----|----|----|----|----|----|----
+|0|5915|0|2|0|0|0|5|0|0|1|0.998649
+|1|0|6727|2|0|0|0|2|10|1|0|0.997775
+|2|0|3|5945|0|1|0|1|7|1|0|0.997818
+|3|0|0|1|6120|0|1|0|6|1|2|0.998206
+|4|0|4|0|0|5822|0|3|1|1|11|0.996577
+|5|0|1|0|5|0|5408|4|1|1|1|0.997602
+|6|2|1|1|1|3|4|5905|0|1|0|0.997803
+|7|0|9|3|1|2|0|0|6248|0|2|0.997287
+|8|2|1|2|3|0|4|2|0|5831|6|0.996582
+|9|3|2|0|0|12|1|0|10|3|5918|0.994789
+
+测试集混淆矩阵
+
+|   |0|1|2|3|4|5|6|7|8|9|acc_rate
+----|----|----|----|----|----|----|----|----|----|----|----
+|0|978|0|0|0|0|0|1|1|0|0|0.997959
+|1|0|1135|0|0|0|0|0|0|0|0|1
+|2|0|0|1028|0|0|0|0|4|0|0|0.996124
+|3|0|0|0|1007|0|2|0|0|1|0|0.99703
+|4|0|0|0|0|979|0|0|1|0|2|0.996945
+|5|0|0|0|3|0|888|1|0|0|0|0.995516
+|6|3|2|0|1|2|4|945|0|1|0|0.98643
+|7|0|2|1|0|0|0|0|1023|1|1|0.995136
+|8|2|0|2|1|0|2|0|0|965|2|0.99076
+|9|0|0|0|0|5|3|0|2|0|999|0.990089
+
 
 
