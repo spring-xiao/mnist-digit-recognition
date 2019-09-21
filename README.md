@@ -77,10 +77,10 @@ adam|0.9893|0.9794
 ## 2.CNN网络建模
 
 网络结构
-- layer1: (conv,filter:5*5*32,stride:1,padding:same,active funtion:Relu)
-- layer2: (pool,filter:3*3,stride:1,padding:valid,pool type:max)
-- layer3: (conv,filter:5*5*64,stride:1,padding:same,active function:Relu)
-- layer4: (pool,filter:5*5,stride:1,padding:valid,pool type:max)
+- layer1: (conv,filter:5\*5\*32,stride:1,padding:same,active funtion:Relu)
+- layer2: (pool,filter:3\*3,stride:1,padding:valid,pool type:max)
+- layer3: (conv,filter:5\*5\*64,stride:1,padding:same,active function:Relu)
+- layer4: (pool,filter:5\*5,stride:1,padding:valid,pool type:max)
 - layer5: (full connection,nodes:100,active function:relu)
 - layer6: (full connection,nodes:10,active function:softmax)
 - learning rate: 0.001,
