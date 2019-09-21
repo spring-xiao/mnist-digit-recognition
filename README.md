@@ -90,6 +90,7 @@ adam|0.9893|0.9794
 - iters:100
 
 学习率阶梯指数递减，以2次为一阶梯（cnn网络结构，采用学习率衰减，模型效果有明显的提升），记录每次训练的模型效果，训练集和测试集的效果图：
+
 ![markdown](https://github.com/spring-xiao/mnist-digit-recognition/blob/master/result/acc-model-cnn-img.jpg)
 
 以测试集的accuracy为评价指标，选出的最优模型效果如下，模型文件保存为model/mnist-model-cnn.pkl
